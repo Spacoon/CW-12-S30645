@@ -1,0 +1,29 @@
+@Cwiczenia12_HostAddress = http://localhost:5049
+
+GET {{Cwiczenia12_HostAddress}}/api/trips
+Accept: application/json
+
+###
+
+GET {{Cwiczenia12_HostAddress}}/api/trips?pageSize=2
+Accept: application/json
+
+###
+
+DELETE {{Cwiczenia12_HostAddress}}/api/clients/3
+
+###
+
+POST {{Cwiczenia12_HostAddress}}/api/trips/1/clients
+Content-Type: application/json
+
+{
+  "FirstName": "John",
+  "LastName": "Doe",
+  "Email": "doe@wp.pl",
+  "Telephone": "543-323-542",
+  "Pesel": "91040294554",
+  "IdTrip": 1,
+  "TripName": "Rome",
+  "PaymentDate": "2021-04-20"
+}
